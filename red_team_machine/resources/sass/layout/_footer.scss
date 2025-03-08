@@ -1,0 +1,44 @@
+#sanitechFooter {
+    background-color: $grisOscuro;
+    color: $blanco;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    @media (max-width: 566px) {
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    .footer-information,
+    .footer-images {
+        margin: 10px;
+    }
+
+    .footer-information h3 {
+        color: $blanco;
+        margin-bottom: 15px;
+    }
+
+    .footer-information ul li {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 10px;
+        transition: transform 0.2s ease-in-out;
+        color: $blanco;
+        text-decoration: none;
+    }
+
+    #blanxart {
+        background-color: rgb(255, 255, 255);
+    }
+}

@@ -1,0 +1,32 @@
+@mixin grid-container-center {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    place-items: center;
+    align-content: space-around;
+    margin-top: 96px;
+    min-height: 80vh;
+}
+
+
+@mixin card-grid-columns($columns) {
+    display: grid;
+    grid-template-columns: repeat(#{$columns}, 1fr); 
+    justify-items: center;
+}
+
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin flex-row-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
