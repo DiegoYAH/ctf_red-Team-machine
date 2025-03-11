@@ -15,3 +15,10 @@ textarea {
     padding: 10px;
     resize: none;
 }
+
+.div-form, form{
+    display: grid;
+    grid-template-columns: 3;
+    gap: 15px;
+    
+}

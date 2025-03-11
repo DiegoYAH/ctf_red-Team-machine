@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    {{-- @dd(auth()->user()->id); --}}
+    
     @include('partials.header')
     <div id="app">
         

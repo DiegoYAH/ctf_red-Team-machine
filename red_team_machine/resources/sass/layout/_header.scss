@@ -1,7 +1,7 @@
 .navbar {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 
-    &-paciente {
+    &-user {
         background-color: $azulGrisaceo;
         color: $blanco;
         .navbar-brand {
@@ -15,23 +15,8 @@
         }
     }
 
-    &-medico {
-        background-color: $gris;
-        color: $blanco;
-        .navbar-brand {
-            color: $blanco;
-        }
-        .nav-link {
-          color:
-           $blanco;
-      }
-      .navbar-toggler {
-        color: #ffffff;
-    }
-    }
-
     &-admin {
-        background-color: $blanco;
+        background-color: $rojo;
         .nav-link {
             color: $negro;
         }
@@ -55,7 +40,7 @@
         font-size: 30px;
 
         .logo {
-            background-image: url('/storage/images/logo_sanitech.png');
+            background-image: url('/public/storage/avengers.jpg');
             width: 4rem;
             height: 4rem;
             background-size: contain;
@@ -71,6 +56,7 @@
     }
 
     .navbar-nav {
+        flex-direction: row;
         width: 100%;
         justify-content: space-evenly;
 
@@ -86,7 +72,7 @@
 
     @media (max-width: 991.98px) {
         .navbar-nav {
-            flex-direction: column;
+            flex-direction: row;
 
             .nav-item {
                 padding: 10px 45px;

@@ -8,34 +8,13 @@
         <div :class="['collapse', { 'show': isNavbarOpen }]" class="navbar-collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/home/">Inici</a>
+              <a class="nav-link" href="/home/">Home</a>
             </li>
-            <li class="nav-item" v-if="userData.rol === 'paciente'">
-              <a class="nav-link" :href="'/agenda/' + userData.id">Agenda</a>
+            <li class="nav-item">
+              <a class="nav-link" :href="'/profile/' + userData.id">Profile</a>
             </li>
-            <li class="nav-item" v-if="userData.rol === 'paciente'">
-              <a class="nav-link" :href="'/informesClinicos/' + userData.id">Resultats</a>
-            </li>
-            <li class="nav-item" v-if="userData.rol === 'paciente'">
-              <a class="nav-link" :href="'/solicitudes/'">Solicituts</a>
-            </li>
-            <li class="nav-item" v-if="userData.rol === 'paciente'">
-              <a class="nav-link" :href="'/notificaciones/' + userData.id">Notificacions</a>
-            </li>
-            <li class="nav-item" v-if="userData.rol === 'admin'">
-              <a class="nav-link" :href="'/tareas/'">Tasques</a>
-            </li>
-            <li class="nav-item" v-if="userData.rol === 'admin'">
-              <a class="nav-link" :href="'/buscadorMedico/agendaMedico/'">Agenda dels metges</a>
-            </li>
-            <li class="nav-item" v-if="userData.rol === 'medico'">
-              <a class="nav-link" href="/buscadorPacientes/crearCita">Crear cita</a>
-            </li>
-            <li class="nav-item" v-if="userData.rol === 'medico'">
-              <a class="nav-link" href="/buscadorPacientes/resultadosPaciente">Resultats pacients</a>
-            </li>
-            <li class="nav-item" v-if="userData.rol === 'medico'">
-              <a class="nav-link" href="/buscadorPacientes/agendaPaciente">Agenda pacients</a>
+            <li class="nav-item" v-if="userData.role === 'admin'">
+              <a class="nav-link" :href="'/informesClinicos/' + userData.id">Avengers List</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/logout/">Logout</a>
@@ -60,13 +39,12 @@
       }
     },
     computed: {
-      // userRoleClass() {
-      //   // Retorna la clase correspondiente al rol del usuario
-      //   return this.userData.rol === 'paciente' ? 'navbar-paciente' :
-      //     this.userData.rol === 'medico' ? 'navbar-medico' :
-      //       this.userData.rol === 'admin' ? 'navbar-admin' :
-      //         '';
-      // }
+      userRoleClass() {
+        // Retorna la clase correspondiente al rol del usuario
+        return this.userData.role === 'user' ? 'navbar-user' :
+            this.userData.role === 'admin' ? 'navbar-admin' :
+              '';
+      }
     },
     mounted() {
       console.log(this.userData);

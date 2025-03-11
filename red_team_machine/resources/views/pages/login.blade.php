@@ -18,13 +18,12 @@
             </div>
             <div>
                 <form class="login-form-content" action="{{ route('custom-login') }}" method="POST">
-                    {{-- <form class="login-form-content" action="#" method="POST"> --}}
                     @csrf
                     <div class="login-form-unit">
-                        <input class="login-form-input" type="text" id="name" autocomplete="off" name="name"
+                        <input class="login-form-input" type="text" id="av_userName" autocomplete="off" name="av_userName"
                             required placeholder="">
-                        <label class="login-form-label" for="name">Avenger Name</label>
-                        @if ($errors->has('name'))
+                        <label class="login-form-label" for="av_userName">Avenger Name</label>
+                        @if ($errors->has('av_userName'))
                             <span class="msg-error">The Avenger name is required.</span>
                         @endif
                     </div>

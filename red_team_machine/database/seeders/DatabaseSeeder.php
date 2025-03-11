@@ -20,13 +20,31 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        User::factory()->create([
+        User::factory()->createMany([
+        [
 
-            'name' => '123',
+            'name' => 'Tony stark',
+            'av_userName' => 'ironMan',
             'email' => 'ironman@avengers.com',
-            'password' => bcrypt('123')
+            'password' => bcrypt('123'),
+            'role' => 'user'
 
-        ]);
+        ],
+        [
+            'name' => 'Steve Rogers',
+            'av_userName' => 'captainAmerica',
+            'email' => 'captainAmerica@avengers.com',
+            'password' => bcrypt('Peggy1945'),
+            'role' => 'user'
+        ],
+        [
+            'name' => 'Jarvis',
+            'av_userName' => 'jarvisAdmin',
+            'email' => 'jarvis@avengers.com',
+            'password' => bcrypt('123'),
+            'role' => 'admin'
+        ]
+    ]);
 
 
     }

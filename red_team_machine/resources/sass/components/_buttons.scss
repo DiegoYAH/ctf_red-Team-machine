@@ -1,0 +1,98 @@
+.icon {
+    &-blue {
+        font-size: 30px;
+        color: $azulOscuro;
+        cursor: pointer;
+    }
+}
+
+.select-wrapper {
+    cursor: pointer;
+}
+
+select {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #ccc;
+    appearance: none;
+    background-color: #fff;
+    color: #000;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M4.4,5.6l2.6,2.6c0.2,0.2,0.5,0.2,0.7,0l2.6-2.6c0.2-0.2,0.2-0.5,0-0.7s-0.5-0.2-0.7,0L7,7.2L5.1,4.9c-0.2-0.2-0.5-0.2-0.7,0S4.2,5.4,4.4,5.6z"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%, 0 0;
+    background-size: 24px auto, 100%;
+}
+
+select:hover {
+    border-color: #888;
+    transition: border-color 0.6s ease;
+}
+
+.confirmar-btn {
+    background-color: $azulClaro;
+    color: $blanco;
+    padding: 20px 60px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+    &:hover {
+        background-color: $azulOscuro;
+    }
+}
+
+.dialog-button {
+    width: 5rem;
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 5px;
+    grid-row: 2;
+
+    &-confirmar {
+        background-color: $verde2;
+        color: $blanco;
+
+        &:hover {
+            background-color: $verde2-hover;
+        }
+    }
+
+    &-rechazar {
+        background-color: $rojo;
+        color: $blanco;
+
+        &:hover {
+            background-color: $rojo-hover;
+        }
+    }
+}
+
+.cerrar-btn {
+    width: 8rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+//Botón atrás
+.back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05); 
+    }
+    
+    i {
+        margin-bottom: 10px;
+    }
+}

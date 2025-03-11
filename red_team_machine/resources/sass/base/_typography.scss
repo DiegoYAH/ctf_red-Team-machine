@@ -21,6 +21,16 @@ span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+table, td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+td{
+  padding: 10px 30px;
 }
 
 .negrita {

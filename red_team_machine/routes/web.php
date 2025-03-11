@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,5 +40,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     //ruta 'logout'
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+
+    Route::get('/profile/{id}', [InfoController::class, 'info'])->name('info');
+
+    Route::post('/cambiar-contraseña', [AuthController::class, 'update'])->name('password.update');
 
 });
