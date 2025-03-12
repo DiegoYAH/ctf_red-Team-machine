@@ -8,6 +8,6 @@
     <div class="footer-images">
         <img class="logo" src='/storage/catskills.jpg'>
         <img class="logo" src='/storage/ITB.png'>
-        <img class="logo" id="blanxart" src="{{asset('storage/images/blanxart-logo.png')}}">
+        {{-- <img class="logo" id="blanxart" src="{{asset('storage/images/blanxart-logo.png')}}"> --}}
     </div>
 </footer>
